@@ -22,7 +22,7 @@ import orderstatusReducer from "./orderstatus";
 
 const rootReducer = combineReducers({
   ui: uiReducer,
- 
+  category: categoryReducer,
   home: homeReducer,
   login: loginReducer,
   product:productReducer,

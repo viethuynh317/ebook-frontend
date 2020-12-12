@@ -47,7 +47,7 @@ export const signin = (user) => async (dispatch) => {
       payload: data
     });
     if (data.role[0] === 'Admin') {
-      history.push('/admin')
+      history.push('/admin/product')
       window.location.reload();
 
     } else {
