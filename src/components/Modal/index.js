@@ -9,58 +9,48 @@ class Modal extends Component {
         const { hideModal } = modalActionCreators;
         let xhtml = null;
         if (open) {
-            return (xhtml = ( <
-                div className = "modal fade show"
+            return (xhtml = ( 
+              <div className = "modal fade show"
                 style = {
                     { display: 'block' } } >
-                <
-                div className = "modal-dialog" >
-                <
-                div className = "modal-content" >
-                <
-                div className = "modal-header" >
-                <
-                h5 className = "modal-title" > { title } < /h5> <
-                button type = "button"
+                <div className = "modal-dialog" >
+                <div className = "modal-content" >
+                <div className = "modal-header" >
+                <h5 className = "modal-title" > { title } </h5> 
+                <button type = "button"
                 className = "close"
                 onClick = { hideModal } >
-                <
-                span > × < /span> <
-                /button> <
-                /div> <
-                div > { component } < /div> <
-                /div> <
-                /div> <
-                /div>
+                <span > × </span> 
+                </button> 
+                </div> 
+                <div> { component } </div> 
+                </div> 
+                </div>
+                </div>
             ));
         } else {
-            return (xhtml = ( <
-                div className = "modal fade" >
-                <
-                div className = "modal-dialog" >
-                <
-                div className = "modal-content" >
-                <
-                div className = "modal-header" >
-                <
-                h5 className = "modal-title" > { title } < /h5> <
-                button type = "button"
+            return (xhtml = ( 
+              <div className = "modal fade" >
+                <div className = "modal-dialog" >
+                <div className = "modal-content" >
+                <div className = "modal-header" >
+                <h5 className = "modal-title" > { title } </h5>
+                 <button type = "button"
                 className = "close"
                 onClick = { hideModal } >
-                <
-                span > × < /span> <
-                /button> <
-                /div> <
-                div > { component } < /div> <
-                /div> <
-                /div> <
-                /div>
+                <span > × </span>
+                </button> 
+                </div>
+                 <div > { component } </div>
+                  </div>
+                   </div>
+                    </div>
             ));
         }
     }
 
     render() {
-        return <div > { this.renderModal() } < /div>;
+        return <div> { this.renderModal() } </div>;
     }
 }
 
