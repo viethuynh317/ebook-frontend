@@ -4,7 +4,7 @@
 }
 .product_text .price {
     color: #ff002f;
-    font-weight: 700;
+    font-weight: 550;
     margin-bottom: .3rem;
   }
 .product_text .name {
@@ -32,11 +32,12 @@
     bottom: 10px;
 }
 .card {
+    border: none;
     overflow: hidden;
 }
 .cart-btn:hover {
     transform: rotate(360deg);
-    background-color: var(--second-color);
+    background-color: #3498db;
     border-color: var(--second-color);
     color: #fff;
     transition: all 0.3s linear;
@@ -57,13 +58,13 @@
 
 .discount {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    background-image: linear-gradient(-90deg,#ffe9e9 0%,#ff9c00 100%);
+    /* background-image: linear-gradient(-90deg,#ffe9e9 0%,#ff9c00 100%); */
     border-radius: 10px;
-    padding: 1px 7px;
-    padding-left: 0;
-    padding-right: 10px;
+    padding: 7px;
+    border-radius: 50%;
+    background-color:#e74c3c;
 }
 .notdiscount{
     text-decoration: line-through;

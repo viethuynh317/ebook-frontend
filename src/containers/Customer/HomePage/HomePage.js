@@ -27,11 +27,10 @@ class HomePage extends Component  {
         }
         return (
            
-            <div className='container'>
+            <div className='container p-5'>
                 <div className='row'>
-                
-                    <div className='col-lg-3'></div>
-                    <div className='col-lg-9'>
+                <div className='col-lg-1'></div>
+                    <div className='col-lg-10'>
                         <div className='banner set-bg'>
                         </div>
                     </div>
@@ -41,9 +40,8 @@ class HomePage extends Component  {
                     <img src="https://ccbook.vn/wordpress/wp-content/uploads/2020/01/banner_ngang.png"></img>
                 </div>
                   <ProductList  key={1} products={data.filter(item => item.discount > 0)} title="Sản Phẩm Khuyến Mãi" setdd={this.props.setdd}/>
-                  <ProductList  key={2} products={data.filter(item => item.status_id == 3)} title="Sản Phẩm Mới" setdd={this.props.setdd}/>
-                  <ProductList   key={3} products={data.filter(item => item.category_id == 23)} title="Sách Học Ngoại Ngữ" setdd={this.props.setdd}/>
-                  <ProductList  key={4} products={data.filter(item => item.category_id == 20)} title="Sách Thiếu Nhi" setdd={this.props.setdd}/>
+                  <ProductList  key={2} products={data.filter(item => item.status_id == 1)} title="Sản Phẩm Mới" setdd={this.props.setdd}/>
+                  
             </div>
         )
     }

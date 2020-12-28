@@ -32,6 +32,9 @@ class CartDetailPage extends Component {
             <>
                     <div className="container" style={{paddingTop: '6rem'}}>
                         <div className="row">
+                        <div className="col-sm-3 shipping">
+                        <Shipping cart = {cartInfor} userSigin = {this.props.userSignin}></Shipping>
+                        </div>
                             <div className="col-sm-9">
                                 
                            
@@ -57,10 +60,8 @@ class CartDetailPage extends Component {
                             </div>
                         </div>
                         </div>
-                        <div className="col-sm-3 shipping">
-                        <Shipping cart = {cartInfor} userSigin = {this.props.userSignin}></Shipping>
+                        
                         </div>
-                             </div>
                     </div>
 
                     

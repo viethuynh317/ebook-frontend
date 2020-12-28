@@ -20,41 +20,39 @@ class UserItem extends Component {
       information,
       category,
       producer,
-      status
+      status,
     } = product;
 
     return (
       <tr>
-        <td>{id}</td>
-        <td>{name}</td>
+        <td> {id} </td> <td> {name} </td>{" "}
         <td>
-          <img src={`${link}${photo}`}  height="100px" width="100px"/>
+          <img src={`${link}${photo}`} height="100px" width="100px" />
         </td>
-       
-        <td>{description}</td>
-        <td>{amount}</td>
-        <td>{price}</td>
-        <td>{discount}</td>
-        <td>{information}</td>
-        <td>{category}</td>
-        <td>{producer}</td>
-        <td>{status}</td>
+        <td> {description} </td> 
+        <td> {amount} </td> 
+        <td> {price} </td>{" "}
+        <td> {discount} </td> 
+        <td> {information} </td> 
+        <td> {category} </td>{" "}
+        <td> {producer} </td> 
+        <td> {status} </td>{" "}
         <td>
           <div className="btn-group float-right">
             <button
               className="btn btn-outline-danger"
               onClick={() => this.onClickDelete(product)}
             >
-              <i className="fas fa-trash-alt"></i>
-            </button>
+              <i className="fas fa-trash-alt"> </i>{" "}
+            </button>{" "}
             <button
               className="btn btn-outline-info"
               onClick={() => this.onClickEdit(product)}
             >
-              <i className="fas fa-edit"></i>
-            </button>
-          </div>
-        </td>
+              <i className="fas fa-edit"> </i>{" "}
+            </button>{" "}
+          </div>{" "}
+        </td>{" "}
       </tr>
     );
   }

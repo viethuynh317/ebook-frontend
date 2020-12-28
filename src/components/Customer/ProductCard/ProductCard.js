@@ -19,17 +19,17 @@ class ProductCard extends Component {
             <div className='col-lg-12 abc'>
                 <div className='card'>
                     <div
-                        className='img-container p-5'
+                        className='img-container'
                         onClick={this.handleProductClick}
                     >
                         <Link to={`/productdetail/${id}`} onClick={() => this.props.setdd(false)}>
                             <img src={`${SERVER_IMAGE}${photo}`} alt={name} className='card-img-top' />
-                        </Link>
-                        <label className="btn btn-warning discount">- {this.props.product.discount}%</label> 
+                        </Link> 
+                        {this.props.product.discount==0?null: <label className="btn btn-warning discount">{this.props.product.discount}%</label>}
                         <div className='btn-bar'>
                          {
                            (amount > 0 ) ? <button
-                           className='cart-btn'
+                           className='cart-btn' 
                            disabled={inCart ? true : false}
                            onClick={() => {
                                const {product} = this.props;
@@ -37,20 +37,17 @@ class ProductCard extends Component {
                                this.props.dispatch(addProductToCart(product))
                            }}
                        >
-                           <FontAwesomeIcon icon={faCartPlus} />
+                           <FontAwesomeIcon icon={faCartPlus} /> 
                         </button> : <button className="btn btn-warning">Hết Hàng</button>
                          }
-                                    
-                             
 
-                               
                         </div>
                     </div>
 
                 </div>
                 <div className='product_text'>
                     <h4 className='price'>{price === undefined ? null : priceformat((price - (price * (discount/100))))}</h4>
-                    <span className='price notdiscount'>{price === undefined ? null : priceformat(price)}</span>
+                    {this.props.product.discount==0?null:<span className='price notdiscount'>{price === undefined ? null : priceformat(price)}</span>}
                     <h6 className='name'>{name}</h6>
                 </div>
             </div>

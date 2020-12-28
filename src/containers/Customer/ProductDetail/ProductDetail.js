@@ -113,7 +113,7 @@ class ProductDetailPage extends Component {
                             draggable={true}
                             showDots={true}
                             autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                            autoPlaySpeed={1000}
+                            autoPlaySpeed={3000}
                             renderDotsOutside={true}
                             responsive={responsive}
                             infinite={true}
@@ -150,7 +150,7 @@ class ProductDetailPage extends Component {
                             <p className='text-muted price_secondary'>
                                 Giá :
                                 <span className='price'>{price === undefined ? null : priceformat((price - (price * (discount/100))))}</span>
-                                <span className='price notdiscount'>{price === undefined ? null : priceformat(price)}</span>
+                                {discount==0?null:<span className='price notdiscount'>{price === undefined ? null : priceformat(price)}</span>}
 
                             </p>
                         </div>

@@ -37,9 +37,8 @@ class Sidebar extends Component {
           <div className="sb-sidenav-menu">
             <div className="nav">{this.renderList()}</div>
           </div>
-          <div className="sb-sidenav-footer">
-            <div className="small">Logged in as:</div>
-            Start Bootstrap
+          <div className="sb-sidenav-footer">        
+            Ebook Shop
           </div>
         </nav>
       </div>

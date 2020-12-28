@@ -142,8 +142,6 @@ class User extends Component {
     return (
       <main>
         <div className="container-fluid">
-          <h1 className="mt-2">User</h1>
-
           <ol className="breadcrumb mb-2">
             <li className="breadcrumb-item">
               <a href="index.html">Admin</a>
@@ -160,14 +158,10 @@ class User extends Component {
             <i className="fas fa-user-plus"></i>
           </button>
           <div className="card mb-2">
-            <div className="card-header">
-              <i className="fas fa-table mr-1" />
-              DataTable User
-            </div>
             <div className="card-body">
               <div className="table-responsive">
                 <table className="table table-bordered">
-                  <thead>
+                  <thead className="thead-dark">
                     <tr>
                       <th>id</th>
                       <th>name</th>

@@ -12,7 +12,7 @@ class RatingItem extends React.Component {
     count={5}
     value={this.props.rating}
     edit={false}
-    size={50}
+    size={30}
     color2={"#ffd700"}
      />
         </div>

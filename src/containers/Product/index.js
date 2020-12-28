@@ -144,7 +144,7 @@ class Product extends Component {
     return (
       <main>
         <div className="container-fluid">
-          <h1 className="mt-2">Product</h1>
+         
 
           <ol className="breadcrumb mb-2">
             <li className="breadcrumb-item">
@@ -162,10 +162,7 @@ class Product extends Component {
             <i className="fas fa-product-plus"></i>
           </button>
           <div className="card mb-2">
-            <div className="card-header">
-              <i className="fas fa-table mr-1" />
-              DataTable Product
-            </div>
+            
             <div className="card-body">
               <div className="table-responsive mb-2">
                 <table className="table table-bordered">

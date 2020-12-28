@@ -28,7 +28,6 @@ class OrderById extends Component {
                     <small>price: {index.pivot["price"]}</small>
                     <br />   
                   </div>
-                  
                 </div>
               );
             })}

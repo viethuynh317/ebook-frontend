@@ -109,7 +109,7 @@ function Profile(props) {
         </div>
      
 
-        <button  type="submit" className="btn btn-warning">UPDATE INFO</button>
+        <button  type="submit" className="btn btn-primary">UPDATE INFO</button>
       </form>
       </div>
        <div className="col-sm-8 order_Manage">

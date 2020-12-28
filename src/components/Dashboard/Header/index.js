@@ -4,28 +4,26 @@ import {logout} from '../../../actions/user'
 
 
 class Header extends Component {
-
+  
 
   handleLogout = () =>{
     this.props.logout();
 }
   render() {
+    const emailLocal = localStorage.getItem('email-login');
+    const emailLength = emailLocal.length
+    const email = emailLocal.slice(0, emailLength - 10);
     return (
-      <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <nav className="sb-topnav navbar navbar-expand navbar-dark">
         <a className="navbar-brand" href="index.html">
-          Start Bootstrap
+          Ebook Shop
         </a>
-        <button
-          className="btn btn-link btn-sm order-1 order-lg-0"
-          id="sidebarToggle"
-          href="/#"
-        >
-          <i className="fas fa-bars" />
-        </button>
+     
         {/* Navbar Search*/}
         <form className="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-          <div className="input-group">
-            <input
+          <div className="input-group text-white" >
+          Xin chào,
+            {/* <input
               className="form-control"
               type="text"
               placeholder="Search for..."
@@ -36,7 +34,9 @@ class Header extends Component {
               <button className="btn btn-primary" type="button">
                 <i className="fas fa-search" />
               </button>
-            </div>
+            </div> */
+             email
+            }
           </div>
         </form>
         {/* Navbar*/}

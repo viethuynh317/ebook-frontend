@@ -82,28 +82,44 @@ class Main extends Component {
                     <div className="header__top">
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="header__top__left">
-                                        <ul>
-                                            <li>Contact us</li>
-                                            <li>Free Shipping for all Order of $99</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="header__top__right">
-                                        <div className="header__top__right__social">
-                                            <a href="/"><FontAwesomeIcon icon={faFacebook} /></a>
-                                            <a href="/"><FontAwesomeIcon icon={faTwitter} /></a>
-                                            <a href="/"><FontAwesomeIcon icon={faLinkedin} /></a>
-                                            <a href="/"><FontAwesomeIcon icon={faInstagram} /></a>
-                                        </div>
+                            <div className='col-lg-2'>
+                            <div className='header__logo'>
+                                <Link to='/'><img src='https://ebook.vn/images/logo-white.png' alt=''/></Link>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4'>
+                            <nav className='header__menu'>
+                                <ul>
+                                    <li>
+                                        <div onClick={() => { this.setDropDown(true) }}><NavLink to='/' activeClassName='active' isActive={checkActive}>Home</NavLink></div>
+                                    </li>
+                                    <li>
+                                        <div onClick={() => { this.setDropDown(false) }}><NavLink to='/category' activeClassName='active'>Shop</NavLink></div>
+                                    </li>
+                                    {/* <li>
+                                       <div onClick={() => { this.setDropDown(false) }}><NavLink to='/pages' activeClassName='active'>Pages</NavLink></div>
+                                    </li> */}
+                                    <li>
+                                        <div onClick={() => { this.setDropDown(false) }}><NavLink to='/about' activeClassName='active'>About</NavLink></div>
+                                    </li>
+                                    <li>
+                                        <div onClick={() => { this.setDropDown(false) }}><NavLink to='/contact' activeClassName='active'>Contact</NavLink></div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>  
+                        <div className='col-lg-5'>
+                                 <Search setdd={this.setDropDown}/>
+                         </div>
+                                <div className="col-lg-1 col-md-1">
+                                    <div className="header__top__right">   
                                         <div className="header__top__right__auth">
                                         {
                                        this.props.userSignin ?
-                                        <Link className="badge badge-pill badge-success"  onClick={() => { this.setDropDown(false) }} to="/profile">Welcome <b>{this.props.userSignin.name} ! </b> </Link> 
+                                        <Link className="badge badge-pill"  onClick={() => { this.setDropDown(false) }} to="/profile">Welcome <b>{this.props.userSignin.name} ! </b> </Link> 
                                          :
-                                        <Link onClick={() => { this.setDropDown(false) }} to="/login"><FontAwesomeIcon icon={faUser} /> Login</Link>
+                                        <Link onClick={() => { this.setDropDown(false) }} to="/login"   class="btn btn-light"> Login</Link>
                                         }
                                       
                                            
@@ -119,67 +135,20 @@ class Main extends Component {
                     <div className="container">
                         <div className="row">
                             <div className='col-lg-3'>
-                                <div className='header__logo'>
-                                    <Link to='/home'><img src={logo} alt=''/></Link>
-                                </div>
-
-                            </div>
-                            <div className='col-lg-6'>
-                                <nav className='header__menu'>
-                                    <ul>
-                                        <li>
-                                            <div onClick={() => { this.setDropDown(true) }}><NavLink to='/' activeClassName='active' isActive={checkActive}>Home</NavLink></div>
-                                        </li>
-                                        <li>
-                                            <div onClick={() => { this.setDropDown(false) }}><NavLink to='/category' activeClassName='active'>Shop</NavLink></div>
-                                        </li>
-                                        {/* <li>
-                                           <div onClick={() => { this.setDropDown(false) }}><NavLink to='/pages' activeClassName='active'>Pages</NavLink></div>
-                                        </li> */}
-                                        <li>
-                                            <div onClick={() => { this.setDropDown(false) }}><NavLink to='/about' activeClassName='active'>About</NavLink></div>
-                                        </li>
-                                        <li>
-                                            <div onClick={() => { this.setDropDown(false) }}><NavLink to='/contact' activeClassName='active'>Contact</NavLink></div>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div className='col-lg-3'>
                                 <div className="header__cart">
                                     <ul>
                                         <li>
                                             <Link onClick={() => { this.setDropDown(false) }} to="/cartdetail">
-                                                <FontAwesomeIcon icon={faShoppingCart} color='black' />
+                                                <FontAwesomeIcon icon={faShoppingCart} color='while' />
                                               <span>{this.props.cartItemCount}</span>
                                             </Link>
 
                                         </li>
                                     </ul>
-                                    <div className="header__cart__price">Tổng Tiền : <b>{priceformat(this.props.totalPrice)}</b></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <section className="hero">
-                        <div className='container'>
-                            <div className='row'>
-                                <div className='col-lg-3'>
-                                    <div className='hero__categories'>
-                                        <div className='hero__categories__all' onClick={this.toggleDropDown}>
-                                            <FontAwesomeIcon icon={faBars} className='fai' />
-                                            <span>All categories</span>
-                                            <FontAwesomeIcon icon={faSortDown} className='fai_after' />
-                                        </div>
-                                        <CategoryList open={this.state.open_dropdown} categories={data} />
-                                    </div>
-                                </div>
-                                <div className='col-lg-9'>
-                                 <Search setdd={this.setDropDown}/>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
                 <Switch>
 

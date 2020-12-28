@@ -13,27 +13,27 @@ class UserItem extends Component {
 
     return (
       <tr>
-        <td>{id}</td>
-        <td>{name}</td> 
-        <td>{email}</td>    
-        <td>{birthday}</td>
-        <td>{role}</td>
+        <td> {id} </td>
+        <td> {name} </td> 
+        <td> {email} </td>{" "}
+        <td> {birthday} </td>
+        <td> {role} </td>{" "}
         <td>
           <div className="btn-group float-right">
             <button
               className="btn btn-outline-danger"
               onClick={() => this.onClickDelete(user)}
             >
-              <i className="fas fa-trash-alt"></i>
-            </button>
+              <i className="fas fa-trash-alt"> </i>{" "}
+            </button>{" "}
             <button
               className="btn btn-outline-info"
               onClick={() => this.onClickEdit(user)}
             >
-              <i className="fas fa-edit"></i>
-            </button>
-          </div>
-        </td>
+              <i className="fas fa-edit"> </i>{" "}
+            </button>{" "}
+          </div>{" "}
+        </td>{" "}
       </tr>
     );
   }

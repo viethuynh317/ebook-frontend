@@ -1,5 +1,6 @@
 .add_border {
-    border: 1px solid #d1d5da;
+    /* border: 1px solid #d1d5da; */
+    border: none !important;
     margin-top: 15px;
     margin-bottom: 40px;
     padding-top: 20px;
@@ -26,15 +27,16 @@
 }
 
 .product_title p.name{
+    font-family: "Roboto Slab", serif;
     font-size: 26px;
     font-weight: bold;
     color: #0d5cc4e5;
 }
 
 .product_title p .producer{
-    font-size: 26px;
+    font-size: 21px;
     font-weight: bold;
-    color: #0d5cc4e5 !important;
+    color: #000000e5 !important;
 }
 
 p.price_secondary {
@@ -61,6 +63,7 @@ p.price_secondary {
     color: #ff0405;
     font-weight: bold;
     font-size: 30px;
+    padding-right: 15px;
 }
 
 .in_stock {

@@ -32,6 +32,7 @@ class Login extends Component {
     const { signin } = actionUserCreators;
    
     const user = {email:this.state.email, password:this.state.password};
+    localStorage.setItem('email-login', this.state.email);
    // const redirect = this.props.location.search ? this.location.search.split("=")[1] : '/';
  //  browserHistory.push('/register')
     signin(user);
@@ -101,15 +102,13 @@ class Login extends Component {
                             </label>
                           </div>
                         </div> */}
-                        <div className="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                          <a className="small" href="password.html">
-                    
-                          </a>
+                        <div className="form-group d-flex justify-content-between mt-4 mb-0">
+                          
                           {/* <a className="btn btn-primary">
                             Login
                           </a> */
                           }
-                           <input type="submit" value="Submit" />
+                           <input className="btn btn-primary" type="submit" value="Submit" />
                         </div>
                       </form>
                     </div>
@@ -128,7 +127,7 @@ class Login extends Component {
           <footer className="py-4 bg-light mt-auto">
             <div className="container-fluid">
               <div className="d-flex align-items-center justify-content-between small">
-                <div className="text-muted">Copyright © DinhLongIT</div>
+                
                 <div>
                   <a href="/#">Privacy Policy</a>·
                   <a href="/#">Terms &amp; Conditions</a>

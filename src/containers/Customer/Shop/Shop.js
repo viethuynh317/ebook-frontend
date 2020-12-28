@@ -104,7 +104,7 @@ const Shop = (props) => {
              }}
              name="filterprice"
               defaultValue={1} 
-              /><label >Giá Cao Đến Thấp</label>
+              /><label >Giá Thấp Đến Cao</label>
               </li>
            <li><input type="radio" id="2" 
              onClick={(id) =>{
@@ -113,7 +113,7 @@ const Shop = (props) => {
            }}
            name="filterprice" 
            defaultValue={1} 
-           /><label>Giá Thấp Đến Cao</label>
+           /><label> Giá Cao Đến Thấp</label>
            </li>
        </ul>
        
@@ -155,7 +155,7 @@ const Shop = (props) => {
   <div className="col-sm-9">
 
    <ProductGrid key={1} products={data} title={title} setdd={props.setdd}/>  
-  <nav aria-label="Page navigation example">
+  <nav aria-label="Page navigation example" style={{marginTop:'0.5rem'}}>
   <ul className="pagination">
     <li className="page-item">
       <a className="page-link" href="#" aria-label="Previous">

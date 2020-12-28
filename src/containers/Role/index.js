@@ -74,7 +74,7 @@ class Role extends Component {
     return (
       <main>
         <div className="container-fluid">
-          <h1 className="mt-4">Role</h1>
+          
           <ol className="breadcrumb mb-4">
             <li className="breadcrumb-item">
               <a href="index.html">Admin</a>
@@ -82,10 +82,7 @@ class Role extends Component {
             <li className="breadcrumb-item active">Role</li>
           </ol>
           <div className="card mb-4">
-            <div className="card-header">
-              <i className="fas fa-table mr-1" />
-              DataTable Role
-            </div>
+            
             <div className="card-body">
               <div className="table-responsive">
                 <table
@@ -93,7 +90,7 @@ class Role extends Component {
                   width="100%"
                   cellSpacing={0}
                 >
-                  <thead>
+                  <thead className="thead-dark">
                     <tr>
                       <th>id</th>
                       <th>name</th>

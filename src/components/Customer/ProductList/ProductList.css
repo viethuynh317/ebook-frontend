@@ -55,11 +55,14 @@
 	position: relative;
 	padding: 40px 30px;
 	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2);
+	background: white;
 }
 
 .featured .react-multi-carousel-dot-list {
+	display: none;
 	bottom: 20px;
 }
+
 
 /* .featured .react-multi-carousel-dot-list .react-multi-carousel-dot button{
 	border-color: var(--main-color);

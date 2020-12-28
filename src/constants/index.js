@@ -20,18 +20,12 @@ export const STATUS_CODE = {
 };
 
 export const ADMIN_ROUTES = [
-  {
-    name: 'Dashboard',
-    path: '/admin',
-    exact: true,
-    component: Dashboard,
-  },
-  {
-    name: 'Category',
-    path: '/admin/category',
-    exact: false,
-    component: Category,
-  },
+  // {
+  //   name: 'Category',
+  //   path: '/admin/category',
+  //   exact: true,
+  //   component: Category,
+  // },
   {
     name: 'Product',
     path: '/admin/product',
