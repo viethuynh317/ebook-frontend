@@ -181,7 +181,7 @@ function Register(props) {
           </main>
         </div>
         <div id="layoutAuthentication_footer">
-          <footer className="py-4 bg-light mt-auto">
+          {/* <footer className="py-4 bg-light mt-auto">
             <div className="container-fluid">
               <div className="d-flex align-items-center justify-content-between small">
                 <div className="text-muted">Copyright © Your Website 2019</div>
@@ -191,7 +191,7 @@ function Register(props) {
                 </div>
               </div>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     );

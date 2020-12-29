@@ -124,7 +124,7 @@ class Login extends Component {
           </main>
         </div>
         <div id="layoutAuthentication_footer">
-          <footer className="py-4 bg-light mt-auto">
+          {/* <footer className="py-4 bg-light mt-auto">
             <div className="container-fluid">
               <div className="d-flex align-items-center justify-content-between small">
                 
@@ -134,7 +134,7 @@ class Login extends Component {
                 </div>
               </div>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     );
