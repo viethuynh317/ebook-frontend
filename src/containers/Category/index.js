@@ -50,7 +50,7 @@ class Category extends Component {
       changeModalContent,
     } = modalActionCreators;
     showModal();
-    changeModalTitle("Xóa công việc");
+    changeModalTitle("Xóa Category");
     changeModalContent(
       <div>
         <div className="modal-body">
@@ -143,7 +143,7 @@ class Category extends Component {
 
             <ol className="breadcrumb mb-2">
               <li className="breadcrumb-item">
-                <a href="index.html">Admin</a>
+                Admin
               </li>
               <li className="breadcrumb-item active">Category</li>
             </ol>
